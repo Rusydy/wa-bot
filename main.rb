@@ -1,6 +1,7 @@
 require 'sinatra'
 require 'dotenv/load'
 require 'http_status'
+require_relative 'src/controllers/main_controller'
 
 set :port, ENV['APP_PORT'] || 8080
 
@@ -14,6 +15,14 @@ get '/health-check' do
 end
 
 # list of controllers
+controllers = [
+  MainController
+]
+
+# register controllers
+controllers.each do |controller|
+  use controller
+end
 
 # Trap ^C
 Signal.trap('INT') {
