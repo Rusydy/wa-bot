@@ -1,0 +1,39 @@
+{
+  "object": "whatsapp_business_account",
+  "entry": [
+    {
+      "id": "28145795477",
+      "changes": [
+        {
+          "value": {
+            "messaging_product": "whatsapp",
+            "metadata": {
+              "display_phone_number": "6282345678910",
+              "phone_number_id": "6282345678910"
+            },
+            "contacts": [
+              {
+                "profile": {
+                  "name": "Rusydy"
+                },
+                "wa_id": "6282345678910"
+              }
+            ],
+            "messages": [
+              {
+                "from": "6282345678910",
+                "id": "wamid.HBgNNjI4MjM0Nzg1Njk0NBQjQ1ODZCQjMyRkI5REZEQ0NFAA==",
+                "timestamp": "1716360250",
+                "text": {
+                  "body": "Hi there! I want to know more about your product."
+                },
+                "type": "text"
+              }
+            ]
+          },
+          "field": "messages"
+        }
+      ]
+    }
+  ]
+}
