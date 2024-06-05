@@ -15,7 +15,11 @@ class ChatbotService
     if body_type == 'text'
       return process_text_message(body)
     elsif body_type == 'interactive'
-      return process_interactive_message(body)
+      # return process_interactive_message(body)
+      return {
+        'status_code' => HTTPStatus::NoContent,
+        'message' => 'Interactive message is not supported yet'
+      }
     else
       return {
         'status_code' => HTTPStatus::BadRequest,
@@ -92,5 +96,9 @@ class ChatbotService
     WhatsappService.send_text_message(profile_name, wa_id, text)
 
     puts "Sent error message to #{profile_name} (#{wa_id}): #{text}"
+  end
+
+  def self.send_interactive_message(body)
+
   end
 end
